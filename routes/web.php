@@ -63,6 +63,10 @@ Route::get('Ingenieria-Municipal', function () {
     return view('ingenieria_municipal');
 });
 
+Route::get('Administracion', function () {
+    return view('administracion');
+});
+
 Route::post('/login', [AuthController::class, 'login'])->name('login.login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('login.logout');
 

@@ -82,6 +82,7 @@
 									        	<li><a href="{{ url('Proteccion-Civil') }}">Proteccion Civil</a></li>
 									        	<li><a href="{{ url('Sistema-Sat') }}">Sistema SAT</a></li>
 									        	<li><a href="{{ url('Ingenieria-Municipal') }}">Ingenieria Municipal</a></li>
+									        	<li><a href="{{ url('Administracion') }}">Administración</a></li>
 									       </ul>
 									    </li>
 									    <li><a href="{{ route('contacto.view') }}">Contactanos</a></li>
@@ -175,7 +176,7 @@
 				</div> <!-- /.top-footer -->
 				<div class="bottom-footer">
 					<div class="container">
-						<p>&copy; Copyrights 2025. Alcaldia del Municipio Peñalver. All Rights Reserved.</p>
+						<p>&copy; Copyrights 2025. Alcaldia del Municipio Peñalver & CreacionesMS. All Rights Reserved.</p>
 					</div>
 				</div> <!-- /.bottom-footer -->
 			</footer> <!-- /.theme-footer-two -->
