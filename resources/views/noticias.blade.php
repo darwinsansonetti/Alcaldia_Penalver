@@ -63,57 +63,60 @@
 </div>
 
 <!-- ===========Modal Carton========== -->
-<div class="modal fade" name = "createModal" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 style="color:black;" class="modal-title fs-5" id="solicitudLabel">Noticia</h5>
-			</div>
-			<div class="modal-body">
-				<div class="container-fluid">		</br>			
-					<form id="galeriaForm" enctype="multipart/form-data">
-						<div class="row">
-							<div style="color:black;" class="col-md-6">
-								<h8 style="color:black;">Titulo:</h8>
-							</div>
-							<div style="color:black;" class="col-md-6">							
-								<input type="text" style="padding: 1px; border-style: solid; border-width: 2px; border-color: black;" id="titulo" name="titulo">
-							</div>
-						</div><br/>
-						<div class="row">
-							<div style="color:black;" class="col-md-6">
-								<h8 style="color:black;">Fecha:</h8>
-							</div>
-							<div style="color:black;" class="col-md-6">							
-							<input type="date" id="fecha" name="fecha"
-								style="width: 100%; padding: 1px; border-style: solid; border-width: 2px; border-color: black;"
-								max="">
-							</div>
-						</div><br/>
-						<div class="row">
-							<div style="color:black;" class="col-md-6">
-								<h8 style="color:black;">Descripcion:</h8>
-							</div>
-							<div style="color:black;" class="col-md-6">							
-							<textarea name="descripcion" id="descripcion" rows="5" cols="23"></textarea>
-							</div>
-						</div><br/>
-						<div class="row">
-							<div style="color:black;" class="col-md-12">							
-								<input type="file" id="imagen" name="imagen">
-								<h8 style="color:red;">Medidas Recomendadas 1080 x 1350</h8>
-							</div>
-						</div>	
-							
-						<h8 style="color:red;" id="mensaje"></h8>
-						<input type="hidden" name="_token" id="token" value="{{ csrf_token() }}"></br>
-						<button type="button" onclick="guardar_noticia()" class="btn btn-secondary">Guardar</button>
-					</form>
-				</div>	</br>
-			</div>
-		</div>
-	</div>
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="solicitudLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content shadow-lg rounded-4">
+            
+            <!-- Encabezado del Modal -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="solicitudLabel">Nueva Noticia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <!-- Cuerpo del Modal -->
+            <div class="modal-body bg-light">
+                <form id="galeriaForm" enctype="multipart/form-data">
+                    @csrf
+
+                    <!-- Campo Título -->
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label fw-bold">Título:</label>
+                        <input type="text" class="form-control border-primary" id="titulo" name="titulo" required>
+                    </div>
+
+                    <!-- Campo Fecha -->
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label fw-bold">Fecha:</label>
+                        <input type="date" class="form-control border-primary" id="fecha" name="fecha" required>
+                    </div>
+
+                    <!-- Campo Descripción -->
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label fw-bold">Descripción:</label>
+                        <textarea class="form-control border-primary" id="descripcion" name="descripcion" rows="4" required></textarea>
+                    </div>
+
+                    <!-- Campo Imagen -->
+                    <div class="mb-3">
+                        <label for="imagen" class="form-label fw-bold">Subir Imagen:</label>
+                        <input type="file" class="form-control border-primary" id="imagen" name="imagen" required>
+                        <div class="form-text text-danger">Medidas recomendadas: 1080 x 1350</div>
+                    </div>
+
+                    <!-- Mensaje de error -->
+                    <div id="mensaje" class="text-danger fw-bold"></div>
+					<input type="hidden" name="_token" id="token" value="{{ csrf_token() }}"></br>
+
+                    <!-- Botones -->
+                    <div class="text-end">
+                        <button type="button" onclick="guardar_noticia()" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
 <!-- ===========Modal Carton========== -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

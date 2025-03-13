@@ -35,7 +35,7 @@
 									</div>
 									<div id="collapse1" class="panel-collapse collapse show">
 										<div class="panel-body">
-										<p>La Alcaldía del Municipio Francisco Peñalver del Estado Anzoátegui, es una institución que vela por el bienestar
+										<p>La Alcaldía del Municipio Fernando Peñalver del Estado Anzoátegui, es una institución que vela por el bienestar
 											social, a través de una gestión orientada al cumplimiento de la Constitución de la República Bolivariana de Venezuela
 											y demás leyes, la organización de los poderes públicos municipales y la administración de los recursos y servicios 
 											de la comunidad, permitiendo elevar la calidad de vida y garantizar el desarrollo integral del municipio.
@@ -52,7 +52,7 @@
 									</div>
 									<div id="collapse2" class="panel-collapse collapse">
 										<div class="panel-body">
-										<p>El Municipio Francisco Peñalver del Estado Anzoátegui es y será reconocido como uno de los 21 municipios
+										<p>El Municipio Fernando Peñalver del Estado Anzoátegui es y será reconocido como uno de los 21 municipios
 											quienes integran la geografía del estado y una potencia en materia turística, agrícola y pesquera; así como, por 
 											el desempeñó efectivo de sus recursos y potencialidades, en procura de una mejor calidad de vida para sus 
 											comunidades a traves de la articulación y la participación eficaz de los organismos municipales, estadales y 

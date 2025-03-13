@@ -22,156 +22,48 @@
 		</div> <!-- /.overlay -->
 	</div> <!-- /.theme-inner-banner -->
 
-
-	<!--
-	=====================================================
-		Faq Page
-	=====================================================
+	<!-- 
+	=============================================
+		Our Solution
+	============================================== 
 	-->
-	<div class="faq-page section-spacing">
+	<div class="our-solution section-spacing">
 		<div class="container">
 			<div class="theme-title-one">
 				<h2>Contrataciones Públicas</h2>
-				<p>Estamos necesitando de tus servicios</p>
 			</div> <!-- /.theme-title-one -->
+			<div class="wrapper">
+				<div class="row">
+					@foreach($contrataciones as $item)
+						<div class="col-lg-4 col-sm-6 col-12">
+							<div class="single-solution-block">
+								<img src="{{ asset('images/logo/logo_alcaldia_contrata.png') }}" alt="" class="icon">
+								<h5><a href="#" id="{{ $item->id }}" class="contratacionClick">{{ $item->llamado }}</a></h5>
+								<p>{{ $item->title }}</p>
+							</div> <!-- /.single-solution-block -->
+						</div> <!-- /.col- -->
+					@endforeach		
+				</div> <!-- /.row -->
+			</div> <!-- /.wrapper --><br /><br />
 
-			<div class="faq-panel">
-				<div class="panel-group theme-accordion" id="accordion">
-					<div class="panel">
-					<div class="panel-heading active-panel">
-						<h6 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-						Coordinador de Soporte</a>
-						</h6>
-					</div>
-					<div id="collapse1" class="panel-collapse collapse show">
-						<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-						<ol>
-							<li>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorperadipiscing elit,</li>
-							<li>sed diam nonummynibh  suscipit lobortis nisl ut aliquip ex.</li>
-							<li>vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</li>
-						</ol>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
-						vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					</div> <!-- /panel 1 -->
-					<div class="panel">
-					<div class="panel-heading">
-						<h6 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-						Mensajero</a>
-						</h6>
-					</div>
-					<div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-						<ol>
-							<li>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorperadipiscing elit,</li>
-							<li>sed diam nonummynibh  suscipit lobortis nisl ut aliquip ex.</li>
-							<li>vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</li>
-						</ol>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
-						vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					</div> <!-- /panel 2 -->
-					<div class="panel">
-					<div class="panel-heading">
-						<h6 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-						Recepcionista</a>
-						</h6>
-					</div>
-					<div id="collapse3" class="panel-collapse collapse">
-						<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-						<ol>
-							<li>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorperadipiscing elit,</li>
-							<li>sed diam nonummynibh  suscipit lobortis nisl ut aliquip ex.</li>
-							<li>vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</li>
-						</ol>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
-						vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					</div> <!-- /panel 3 -->
-
-					<div class="panel">
-					<div class="panel-heading">
-						<h6 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-						Chofer Integral</a>
-						</h6>
-					</div>
-					<div id="collapse4" class="panel-collapse collapse">
-						<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-						<ol>
-							<li>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorperadipiscing elit,</li>
-							<li>sed diam nonummynibh  suscipit lobortis nisl ut aliquip ex.</li>
-							<li>vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</li>
-						</ol>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
-						vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					</div> <!-- /panel 4 -->
-
-					<div class="panel">
-					<div class="panel-heading">
-						<h6 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-						Obrero con Experiencia</a>
-						</h6>
-					</div>
-					<div id="collapse5" class="panel-collapse collapse">
-						<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-						<ol>
-							<li>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorperadipiscing elit,</li>
-							<li>sed diam nonummynibh  suscipit lobortis nisl ut aliquip ex.</li>
-							<li>vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</li>
-						</ol>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
-						vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					</div> <!-- /panel 5 -->
-
-					<div class="panel">
-					<div class="panel-heading">
-						<h6 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-						Asistente de Recursos Humanos</a>
-						</h6>
-					</div>
-					<div id="collapse6" class="panel-collapse collapse">
-						<div class="panel-body">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-						<ol>
-							<li>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorperadipiscing elit,</li>
-							<li>sed diam nonummynibh  suscipit lobortis nisl ut aliquip ex.</li>
-							<li>vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.</li>
-						</ol>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
-						vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					</div> <!-- /panel 6 -->
-				</div> <!-- end #accordion -->
-			</div> <!-- /.faq-panel -->
+			<!-- Paginación -->
+			{{ $contrataciones->links() }}
 		</div> <!-- /.container -->
-	</div> <!-- /.faq-page -->
+	</div> <!-- /.our-solution -->
 
-	<div class="service-style-one section-spacing">
-		<div class="container">
-			<div class="contact-text">
-				<h4>Envia tu curriculum vitae y nos pondremos en contacto contigo</h4>
-				<h5><a href="#">recursoshumanoalcaldiapenalver@gmail.com</a></h5>
-			</div>
-		</div> <!-- /.container -->
-	</div> <!-- /.service-style-one -->
 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function (){
+
+			$('.contratacionClick').on('click', function (e){
+				e.preventDefault();
+
+				let contratacionId = this.id; // Obtener el ID de la contratacion
+				let ruta = "{{ url('/show-contratacion') }}/" + contratacionId; // Construir la URL
+
+				window.location.href = ruta; // Redirigir a la vista de Laravel
+			});
+		});
+	</script>
 @endsection

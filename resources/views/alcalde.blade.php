@@ -45,7 +45,7 @@
 
 							Asumo el cargo de alcalde, siendo elegido por el poder popular. Antes de esto, siempre estuvo vinculado 
 							al sector comercial privado. Uno de los puntos más importantes para Carlos Marcano desde que asumió la 
-							alcaldía del municipio Francisco Peñalver, ha sido impulsar el turismo y recuperar la economía del municipio.
+							alcaldía del municipio Fernando Peñalver, ha sido impulsar el turismo y recuperar la economía del municipio.
 						</p>
 						<img src="images/home/sign-black.png" alt="" class="sign">
 					</div> <!-- /.col- -->

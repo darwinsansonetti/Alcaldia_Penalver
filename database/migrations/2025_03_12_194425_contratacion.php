@@ -11,12 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('noticia', function (Blueprint $table) {
+        Schema::create('contratacion', function (Blueprint $table) {
+            
             $table->id();
-            $table->string('title', 255); // Campo título (máx. 255 caracteres)
-            $table->text('descripcion'); // Campo descripción (hasta 65,535 caracteres)
-            $table->string('path_video');
+            $table->string('llamado', 255);
+            $table->text('title'); 
+            $table->text('condiciones'); 
+            $table->text('aclaratorias'); 
+            $table->text('recepcion'); 
             $table->integer('activo')->default(1);
+
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('noticia');
+        Schema::dropIfExists('contratacion');
     }
 };

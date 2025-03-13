@@ -64,84 +64,95 @@
 </div>
 
 <!-- ===========Modal Carton========== -->
-<div class="modal fade" name = "createModal" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 style="color:black;" class="modal-title fs-5" id="solicitudLabel">Evento</h5>
-			</div>
-			<div class="modal-body">
-				<div class="container-fluid">		</br>			
-					<form id="galeriaForm" enctype="multipart/form-data">
-						<div class="row">
-							<div style="color:black;" class="col-md-6">
-								<h8 style="color:black;">Titulo:</h8>
-							</div>
-							<div style="color:black;" class="col-md-6">							
-								<input type="text" style="padding: 1px; border-style: solid; border-width: 2px; border-color: black;" id="titulo" name="titulo">
-							</div>
-						</div><br/>
-						<div class="row">
-							<div style="color:black;" class="col-md-12">							
-								<input type="file" id="imagen" name="imagen">
-								<h8 style="color:red;">Medidas Recomendadas 360 x 310</h8>
-							</div>
-						</div>	
-							
-						<h8 style="color:red;" id="mensaje"></h8>
-						<input type="hidden" name="_token" id="token" value="{{ csrf_token() }}"></br>
-						<button type="button" onclick="guardar_evento()" class="btn btn-secondary">Guardar</button>
-					</form>
-				</div>	</br>
-			</div>
-		</div>
-	</div>
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="solicitudLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content shadow-lg rounded-4">
+            
+            <!-- Encabezado del Modal -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="solicitudLabel">Nuevo Evento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <!-- Cuerpo del Modal -->
+            <div class="modal-body bg-light">
+                <form id="galeriaForm" enctype="multipart/form-data">
+                    @csrf
+
+                    <!-- Campo Título -->
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label fw-bold">Título:</label>
+                        <input type="text" class="form-control border-primary" id="titulo" name="titulo" required>
+                    </div>
+
+                    <!-- Campo Imagen -->
+                    <div class="mb-3">
+                        <label for="imagen" class="form-label fw-bold">Subir Imagen:</label>
+                        <input type="file" class="form-control border-primary" id="imagen" name="imagen" required>
+                        <div class="form-text text-danger">Medidas recomendadas: 360 x 310</div>
+                    </div>
+
+                    <!-- Mensaje de error -->
+                    <div id="mensaje" class="text-danger fw-bold"></div>
+					<input type="hidden" name="_token" id="token" value="{{ csrf_token() }}"></br>
+
+                    <!-- Botones -->
+                    <div class="text-end">
+                        <button type="button" onclick="guardar_evento()" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- ===========Modal Carton========== -->
 
 <!-- ===========Modal videos========== -->
-<div class="modal fade" name = "createModalvideo" id="createModalvideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 style="color:black;" class="modal-title fs-5" id="solicitudLabel">Video</h5>
-			</div>
-			<div class="modal-body">
-				<div class="container-fluid">		</br>			
-					<form id="videoForm" enctype="multipart/form-data">
-						<div class="row">
-							<div style="color:black;" class="col-md-6">
-								<h8 style="color:black;">Titulo:</h8>
-							</div>
-							<div style="color:black;" class="col-md-6">							
-								<input type="text" style="padding: 1px; border-style: solid; border-width: 2px; border-color: black;" id="titulo1" name="titulo1">
-							</div>
-						</div><br/>
-						<div class="row">
-							<div style="color:black;" class="col-md-6">
-								<h8 style="color:black;">URL:</h8>
-							</div>
-							<div style="color:black;" class="col-md-6">							
-								<input type="text" style="padding: 1px; border-style: solid; border-width: 2px; border-color: black;" id="url1" name="url1">
-							</div>
-						</div><br/>
-						<div class="row">
-							<div style="color:black;" class="col-md-6">
-								<h8 style="color:black;">Descripcion:</h8>
-							</div>
-							<div style="color:black;" class="col-md-6">							
-								<textarea name="descripcion1" id="descripcion1" rows="5" cols="23"></textarea>
-							</div>
-						</div>	
-							
-						<h8 style="color:red;" id="mensaje1"></h8>
-						<input type="hidden" name="_token1" id="token1" value="{{ csrf_token() }}"></br>
-						<button type="button" onclick="guardar_video()" class="btn btn-secondary">Guardar</button>
-					</form>
-				</div>	</br>
-			</div>
-		</div>
-	</div>
+<div class="modal fade" id="createModalvideo" tabindex="-1" aria-labelledby="solicitudLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content shadow-lg rounded-4">
+            
+            <!-- Encabezado del Modal -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="solicitudLabel">Nuevo Video</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <!-- Cuerpo del Modal -->
+            <div class="modal-body bg-light">
+                <form id="videoForm" enctype="multipart/form-data">
+                    @csrf
+
+                    <!-- Campo Título -->
+                    <div class="mb-3">
+                        <label for="titulo1" class="form-label fw-bold">Título:</label>
+                        <input type="text" class="form-control border-primary" id="titulo1" name="titulo1" required>
+                    </div>
+
+                    <!-- Campo URL -->
+                    <div class="mb-3">
+                        <label for="url1" class="form-label fw-bold">URL:</label>
+                        <input type="text" class="form-control border-primary" id="url1" name="url1" required>
+                    </div>
+
+                    <!-- Campo Descripción -->
+                    <div class="mb-3">
+                        <label for="descripcion1" class="form-label fw-bold">Descripción:</label>
+                        <textarea class="form-control border-primary" id="descripcion1" name="descripcion1" rows="5" required></textarea>
+                    </div>
+
+                    <!-- Mensaje de error -->
+                    <div id="mensaje1" class="text-danger fw-bold"></div>
+					<input type="hidden" name="_token1" id="token1" value="{{ csrf_token() }}"></br>
+
+                    <!-- Botones -->
+                    <div class="text-end">
+                        <button type="button" onclick="guardar_video()" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- ===========Modal videos========== -->
 

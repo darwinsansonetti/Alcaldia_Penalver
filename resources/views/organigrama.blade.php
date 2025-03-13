@@ -38,8 +38,8 @@
 								<img src="{{ asset('images/blog/organigrama.jpg') }}" alt="">
 							</div> <!-- /.image-box -->
 							<div class="post-meta">
-								<h5 class="title">Organigrama - Alcaldia del municipio Francisco Peñalver</h5>
-								<p>Asi esta conformada y estructurada nuestra alcaldia en el municipio Francisco Peñalver.</p>
+								<h5 class="title">Organigrama - Alcaldia del municipio Fernando Peñalver</h5>
+								<p>Asi esta conformada y estructurada nuestra alcaldia en el municipio Fernando Peñalver.</p>
 							</div> <!-- /.post-meta -->
 						</div> <!-- /.single-blog -->
 					</div> <!-- /.post-wrapper -->

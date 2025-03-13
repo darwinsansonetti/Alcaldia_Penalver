@@ -14,14 +14,16 @@
 		<meta name="msapplication-navbutton-color" content="#061948">
 		<!-- iOS Safari -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="#061948">
-		<title>Alcaldia del Municipio Francisco Peñalver</title>
+		<title>Alcaldia del Municipio Fernando Peñalver</title>
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{{ asset('images/fav-icon/logo_alcaldia.png') }}">
 		
 		<!-- Main style sheet -->
 		<link href="{{ asset('css/style.css') }}" rel="stylesheet">	
 		<!-- responsive style sheet -->
-		<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">	
+		<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
+		@yield('styles')	
 	</head>
 
 	<body>
@@ -74,9 +76,12 @@
 									    </li>
 									    <li><a href="#">Trámites</a>
 									    	<ul class="dropdown">
-									        	<li><a href="https://www.instagram.com/polipenalverccp?igsh=MWZoODAxNzQ3eWtwMQ=="  target="_blank">Policia Peñalver</a></li>
-									        	<li><a href="https://www.instagram.com/imamujerpenalver?igsh=b2h3ZWpkamgyamJs"  target="_blank">Imamujer Peñalver</a></li>
-									        	<li><a href="https://penalver.sigeat.com/login"  target="_blank">Oficina Virtual</a></li>
+									        	<li><a href="{{ url('Servicio-Desarrollo-Social') }}">Desarrollo social</a></li>
+									        	<li><a href="{{ url('Catastro-Municipal') }}">Catastro Municipal</a></li>
+									        	<li><a href="{{ url('Registro-Civil') }}">Registro Civil</a></li>
+									        	<li><a href="{{ url('Proteccion-Civil') }}">Proteccion Civil</a></li>
+									        	<li><a href="{{ url('Sistema-Sat') }}">Sistema SAT</a></li>
+									        	<li><a href="{{ url('Ingenieria-Municipal') }}">Ingenieria Municipal</a></li>
 									       </ul>
 									    </li>
 									    <li><a href="{{ route('contacto.view') }}">Contactanos</a></li>
@@ -104,7 +109,7 @@
 						<div class="row">
 							<div class="col-lg-4 col-sm-6 col-12 logo-widget">
 								<div class="logo"><a href="{{ route('home') }}"><img src="{{ asset('images/logo/logo_alcaldia_fondo_blanco.png') }}" alt=""></a></div>
-								<p>Alcaldia del municipio Francisco Peñalver, Edo. Anzoategui, Venezuela.</p>
+								<p>Alcaldia del municipio Fernando Peñalver, Edo. Anzoategui, Venezuela.</p>
 								<ul class="social-icon">
 									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

@@ -6,6 +6,7 @@ use App\Models\Galeria;
 use App\Models\Video;
 use App\Models\Evento;
 use App\Models\Noticia;
+use App\Models\Contratacion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -38,6 +39,14 @@ class PageController extends Controller
                   ->get();
 
         return view('index', ['galeria' => $galeria, 'eventos' => $eventos, 'video' => $video, 'noticia' => $noticia]);
+    }
+
+    public function show_contratacion($id)
+    {
+        //Contratacion a mostrar
+        $contratacion = Contratacion::findOrFail($id);
+
+        return view('contratacion_detalle', ['contratacion' => $contratacion]);
     }
 
     public function show_new($id)
@@ -100,11 +109,9 @@ class PageController extends Controller
 
     public function show_postulaciones()
     {
-        // $_user = Auth::user();
+        $contrataciones = Contratacion::where('activo', 1)->orderBy('id', 'desc')->paginate(9);
 
-        // $hipodromos = Hipodromo::where('activo', '=', 1)->get();
-
-        return view('postulaciones');
+        return view('postulaciones', ['contrataciones' => $contrataciones]);
     }
 
     public function show_login()
@@ -125,6 +132,18 @@ class PageController extends Controller
         return view('noticia');
     }
 
+    public function contrataciones()
+    {
+        $contrataciones = Contratacion::orderBy('id', 'desc')->paginate(10);
+
+        return view('contrataciones', ['contrataciones' => $contrataciones]);
+    }
+
+    public function create_contratacion()
+    {
+        return view('contratacion_view'); 
+    }
+
     public function galeria()
     {
         $galeria = Galeria::orderBy('id', 'desc')->paginate(10);
@@ -143,6 +162,21 @@ class PageController extends Controller
         $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
 
         return view('noticias', ['noticias' => $noticias]);
+    }
+
+    public function store_contratacion(Request $request)
+    {
+        //Guardar un Contratacion
+        $new_contratacion = new Contratacion;
+        $new_contratacion->title = $request->titulo;
+        $new_contratacion->llamado = $request->llamado;
+        $new_contratacion->condiciones = "Pliego de condiciones:\n" . $request->pliego;        
+        $new_contratacion->aclaratorias = "Aclaratorias:\n" . $request->aclaratorias;        
+        $new_contratacion->recepcion = "Acto de recepción y apertura de sobre:\n" . $request->acto_recepcion;        
+        $new_contratacion->activo = 1;
+        $new_contratacion->save();
+
+        return response()->json(['success' => true]);
     }
 
     public function store_noticia(Request $request)
@@ -216,6 +250,16 @@ class PageController extends Controller
         $new_video->save();
 
         return response()->json(['success' => true, 'path' => 'Imagen']);
+    }
+
+    //Acticar o Desactivar Contrataciones
+    public function active_contratacion(int $contratacion_id, int $opcion){
+
+        $contratacion_consultado = Contratacion::Where('id', '=', $contratacion_id)->first();
+        $contratacion_consultado->activo = $opcion;
+        $contratacion_consultado->save();
+
+        return back();
     }
 
     //Acticar o Desactivar Noticia

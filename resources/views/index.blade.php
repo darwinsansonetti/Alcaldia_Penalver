@@ -28,7 +28,7 @@
 			<div class="camera_caption">
 				<div class="container">
 					<p class="wow fadeInUp animated">Siempre con su pueblo</p>
-					<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Alcaldia del Municipio <br> Francisco Peñalver</h1>
+					<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Alcaldia del Municipio <br> Fernando Peñalver</h1>
 					<a href="{{ route('mision.view') }}" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">Detalles</a>
 				</div> <!-- /.container -->
 			</div> <!-- /.camera_caption -->
@@ -37,7 +37,7 @@
 			<div class="camera_caption">
 				<div class="container">
 					<p class="wow fadeInUp animated">El mejor destino turistico de Venezuela</p>
-					<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Municipio <br> Francisco Peñalver</h1>
+					<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Municipio <br> Fernando Peñalver</h1>
 					<a href="{{ route('galeria.view') }}" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">Detalles</a>
 				</div> <!-- /.container -->
 			</div> <!-- /.camera_caption -->
@@ -195,7 +195,7 @@
 		<div class="container">
 			<div class="theme-title-one">
 				<h2>Galería</h2>
-				<p>El Municipio Francisco Peñalver, el destino turistico preferido para los visitantes</p>
+				<p>El Municipio Fernando Peñalver, el destino turistico preferido para los visitantes</p>
 			</div> <!-- /.theme-title-one -->
 			<div class="wrapper">
 				<div class="row">

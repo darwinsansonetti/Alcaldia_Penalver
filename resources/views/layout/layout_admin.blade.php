@@ -14,7 +14,7 @@
 		<meta name="msapplication-navbutton-color" content="#061948">
 		<!-- iOS Safari -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="#061948">
-		<title>Alcaldia del Municipio Francisco Peñalver</title>
+		<title>Alcaldia del Municipio Fernando Peñalver</title>
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{{ asset('images/fav-icon/logo_alcaldia.png') }}">
 		
@@ -56,7 +56,7 @@
 								   		<li><a href="{{ route('dashboard.show') }}">Galeria</a></li>								    
 								   		<li><a href="{{ route('noticias.show') }}">Noticias</a></li>
 										<li><a href="{{ route('eventos.view') }}">Eventos</a></li>
-									    <li><a href="{{ route('contacto.view') }}">Postulacion</a></li>
+									    <li><a href="{{ route('contrataciones.view') }}">Contrataciones</a></li>
 									    <li><a href="{{ route('login.logout') }}">Cerrar Sesion</a></li>
 								   </ul>
 								</nav> <!-- /#mega-menu-holder -->

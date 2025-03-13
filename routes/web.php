@@ -35,7 +35,33 @@ Route::get('contacto', [PageController::class, 'show_contacto'])->name('contacto
 Route::get('postulaciones', [PageController::class, 'show_postulaciones'])->name('postulaciones.view');
 Route::get('noticia', [PageController::class, 'show_noticia'])->name('noticia.view');
 Route::get('/show-noticia/{noticia_id}', [PageController::class, 'show_new'])->name('noticia.show');
+Route::get('/show-contratacion/{contratacion_id}', [PageController::class, 'show_contratacion'])->name('contratacion.show');
 Route::get('login', [PageController::class, 'show_login'])->name('login.view');
+
+//Tramites
+Route::get('Servicio-Desarrollo-Social', function () {
+    return view('desarrollo_social');
+});
+
+Route::get('Catastro-Municipal', function () {
+    return view('catastro');
+});
+
+Route::get('Registro-Civil', function () {
+    return view('registro_civil');
+});
+
+Route::get('Proteccion-Civil', function () {
+    return view('proteccion_civil');
+});
+
+Route::get('Sistema-Sat', function () {
+    return view('sistema_sat');
+});
+
+Route::get('Ingenieria-Municipal', function () {
+    return view('ingenieria_municipal');
+});
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('login.logout');
@@ -56,3 +82,9 @@ Route::post('/guardar-video', [PageController::class, 'store_video'])->middlewar
 Route::get('admin/noticias', [PageController::class, 'noticias'])->middleware('auth')->name('noticias.show');
 Route::post('/guardar-noticia', [PageController::class, 'store_noticia'])->middleware('auth');
 Route::get('active/noticia/{noticia_id}/{opcion}', [PageController::class, 'active_noticia'])->middleware('auth')->name('active.noticia');
+
+//CONTRATACIONES
+Route::get('admin/contrataciones', [PageController::class, 'contrataciones'])->middleware('auth')->name('contrataciones.view');
+Route::get('nueva-contratacion', [PageController::class, 'create_contratacion'])->middleware('auth')->name('contratacion.create');
+Route::post('/guardar-contratacion', [PageController::class, 'store_contratacion'])->middleware('auth');
+Route::get('active/contratacion/{contratacion_id}/{opcion}', [PageController::class, 'active_contratacion'])->middleware('auth')->name('active.contratacion');
