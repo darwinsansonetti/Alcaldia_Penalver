@@ -41,8 +41,7 @@
 	<div class="container mt-4">
         <div class="card p-4">
             <h4 class="fw-bold mt-3">REQUISITOS EXIGIDOS</h4><br/>
-            <p class="mt-3 text-end">Requisitos de los aspirantes que deseen ofertas sus servicios y/o productos para ser cotizados 
-                por la Alcaldia del Municipio Fernando Peñalver:
+            <p class="mt-3 text-end">Requisitos de los aspirantes que deseen ser proveedores de servicios y/o productos, por la Alcaldia del Municipio Fernando Peñalver:
             </p>
             <ul>
                 <li>Presupuesto</li>

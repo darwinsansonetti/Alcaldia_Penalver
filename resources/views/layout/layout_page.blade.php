@@ -23,6 +23,16 @@
 		<!-- responsive style sheet -->
 		<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
+		<!-- Ocultar el logo en Dispositivos tactiles -->
+		<style>
+		@media (max-width: 1024px), (hover: none) and (pointer: coarse) { 
+			/* Oculta en pantallas menores a 1024px y en dispositivos táctiles */
+			.logo {
+				display: none;
+			}
+		}
+		</style>
+
 		@yield('styles')	
 	</head>
 
